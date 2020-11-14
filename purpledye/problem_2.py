@@ -39,6 +39,19 @@ class Problem2Tests(unittest.TestCase):
     def testSameRepeatedLetter(self):
         result = problem2("aaa")
         self.assertEqual(result, ["aaa"])
+        
+    def test_ispal1(self):
+        result = is_pal("anna")
+        self.assertEqual(result, True)
+        
+    def test_ispal2(self):
+        result = is_pal("kyayk")
+        self.assertEqual(result, True)
+    
+    def test_ispal3(self):
+        result = is_pal("racecar")
+        self.assertEqual(result, True)
+        
 
 if(len(sys.argv) == 2 and sys.argv[1] == 'run_tests' and __name__ == '__main__'):
     unittest.main(argv=[sys.argv[0]])

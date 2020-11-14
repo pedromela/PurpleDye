@@ -41,20 +41,24 @@ class Problem1Tests(unittest.TestCase):
         result = is_attack_possible((2, 2), (4, 3))
         self.assertEqual(result, False)
         
-    def count_attacks1(self):
-        result = count_attacks([(0, 0), (1, 2), (2, 2), (4, 0)], (0, 0))
-        self.assertEqual(result, 1)
-
-    def count_attacks2(self):
-        result = count_attacks([(0, 0), (1, 2), (2, 2), (4, 0)], (2, 2))
+    def test_count_attacks1(self):
+        result = count_attacks((0, 4), [(0, 0), (1, 2), (2, 2), (4, 0)])
+        self.assertEqual(result, 2)
+        
+    def test_count_attacks2(self):
+        result = count_attacks((4, 4), [(0, 0), (1, 2), (2, 2), (4, 0)])
+        self.assertEqual(result, 2)
+                
+    def test_count_attacks3(self):
+        result = count_attacks((1, 1), [(0, 0), (1, 2), (2, 2), (4, 0)])
         self.assertEqual(result, 2)
     
-    def is_bishop_on_board1(self):
+    def test_is_bishop_on_board1(self):
         result = is_bishop_on_board((2, 2), 5)
         self.assertEqual(result, True)
-
-    def is_bishop_on_board2(self):
-        result = is_bishop_on_board((2, -2), 5)
+    
+    def test_is_bishop_on_board2(self):
+        result = is_bishop_on_board((-2, -2), 5)
         self.assertEqual(result, False)
     
  
