@@ -32,6 +32,10 @@ class Problem2Tests(unittest.TestCase):
     def testOk2(self):
         result = problem2("abc")
         self.assertEqual(result, ["a", "b", "c"])
+    
+    def testEmptyData(self):
+        result = problem2("abc")
+        self.assertEqual(result, ["a", "b", "c"])
         
 
 

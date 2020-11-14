@@ -29,11 +29,17 @@ class Problem1Tests(unittest.TestCase):
     def testNegativeData(self):
         result = problem1([(0, 0), (-1, -2), (-2, -2), (-4, 0)],5)
         self.assertEqual(result, 0)
+    
+    def testEmptyData(self):
+        result = problem1([],5)
+        self.assertEqual(result, 0)
+        
+
  
 if(len(sys.argv) == 2 and sys.argv[1] == 'run_tests' and __name__ == '__main__'):
     unittest.main(argv=[sys.argv[0]])
 
-print(problem1([(0, 0),(-1, -2), (-2, -2), (-4, 0)],5))
+
 
 
 
