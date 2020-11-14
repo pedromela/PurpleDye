@@ -17,7 +17,6 @@ def problem1(bishops, M):
 
     
 class Problem1Tests(unittest.TestCase):
-    #Test data with no problems
     def testOk1(self):
         result = problem1([(0, 0), (1, 2), (2, 2), (4, 0)],5)
         self.assertEqual(result, 2)
@@ -33,8 +32,6 @@ class Problem1Tests(unittest.TestCase):
     def testEmptyData(self):
         result = problem1([],5)
         self.assertEqual(result, 0)
-        
-
  
 if(len(sys.argv) == 2 and sys.argv[1] == 'run_tests' and __name__ == '__main__'):
     unittest.main(argv=[sys.argv[0]])

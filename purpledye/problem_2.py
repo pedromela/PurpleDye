@@ -24,7 +24,6 @@ def problem2(input_string):
 
 
 class Problem2Tests(unittest.TestCase):
-    #Test data with no problems
     def testOk1(self):
         result = problem2("racecarannakayak")
         self.assertEqual(result, ["racecar", "anna", "kayak"])
@@ -36,8 +35,6 @@ class Problem2Tests(unittest.TestCase):
     def testEmptyData(self):
         result = problem2("abc")
         self.assertEqual(result, ["a", "b", "c"])
-        
-
 
 if(len(sys.argv) == 2 and sys.argv[1] == 'run_tests' and __name__ == '__main__'):
     unittest.main(argv=[sys.argv[0]])
