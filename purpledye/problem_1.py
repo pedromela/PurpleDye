@@ -32,10 +32,35 @@ class Problem1Tests(unittest.TestCase):
     def testEmptyData(self):
         result = problem1([],5)
         self.assertEqual(result, 0)
- 
-if(len(sys.argv) == 2 and sys.argv[1] == 'run_tests' and __name__ == '__main__'):
-    unittest.main(argv=[sys.argv[0]])
+        
+    def test_is_atack_possible1(self):
+        result = is_attack_possible((2, 2), (4, 0))
+        self.assertEqual(result, True)
 
+    def test_is_atack_possible2(self):
+        result = is_attack_possible((2, 2), (4, 3))
+        self.assertEqual(result, False)
+        
+    def count_attacks1(self):
+        result = count_attacks([(0, 0), (1, 2), (2, 2), (4, 0)], (0, 0))
+        self.assertEqual(result, 1)
+
+    def count_attacks2(self):
+        result = count_attacks([(0, 0), (1, 2), (2, 2), (4, 0)], (2, 2))
+        self.assertEqual(result, 2)
+    
+    def is_bishop_on_board1(self):
+        result = is_bishop_on_board((2, 2), 5)
+        self.assertEqual(result, True)
+
+    def is_bishop_on_board2(self):
+        result = is_bishop_on_board((2, -2), 5)
+        self.assertEqual(result, False)
+    
+ 
+if __name__ == '__main__':
+    if(len(sys.argv) == 2 and sys.argv[1] == 'run_tests'):
+        unittest.main(argv=[sys.argv[0]])
 
 
 

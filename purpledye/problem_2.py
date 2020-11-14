@@ -33,8 +33,12 @@ class Problem2Tests(unittest.TestCase):
         self.assertEqual(result, ["a", "b", "c"])
     
     def testEmptyData(self):
-        result = problem2("abc")
-        self.assertEqual(result, ["a", "b", "c"])
+        result = problem2("")
+        self.assertEqual(result, [])
+        
+    def testSameRepeatedLetter(self):
+        result = problem2("aaa")
+        self.assertEqual(result, ["aaa"])
 
 if(len(sys.argv) == 2 and sys.argv[1] == 'run_tests' and __name__ == '__main__'):
     unittest.main(argv=[sys.argv[0]])
