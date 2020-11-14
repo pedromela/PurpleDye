@@ -1,1 +1,1 @@
-name = 'PurpleDye'
+name = 'purpledye'
