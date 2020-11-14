@@ -61,10 +61,13 @@ class Problem1Tests(unittest.TestCase):
         result = is_bishop_on_board((-2, -2), 5)
         self.assertEqual(result, False)
     
+def run_tests(file):
+    print(file)
+    unittest.main(argv=[file])
  
 if __name__ == '__main__':
     if(len(sys.argv) == 2 and sys.argv[1] == 'run_tests'):
-        unittest.main(argv=[sys.argv[0]])
+        run_tests(sys.argv[0])
 
 
 

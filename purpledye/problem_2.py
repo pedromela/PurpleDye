@@ -52,7 +52,14 @@ class Problem2Tests(unittest.TestCase):
         result = is_pal("racecar")
         self.assertEqual(result, True)
         
+def run_tests(file):
+    print(file)
+    unittest.main(argv=[file])
+ 
+if __name__ == '__main__':
+    if len(sys.argv) == 2 and sys.argv[1] == 'run_tests':
+        run_tests(sys.argv[0])
+        
 
-if(len(sys.argv) == 2 and sys.argv[1] == 'run_tests' and __name__ == '__main__'):
-    unittest.main(argv=[sys.argv[0]])
+
 
